@@ -31,14 +31,8 @@ while True:
  
   
   x = random.randint(1,999)
-  if x == 12:
-    message = 'dua belas'
-  elif x == 53:
-    message = 'lima puluh tiga'
-  else:
-    message = x
 
-  c.send(bytes(str(message), 'utf8'))
+  c.send(bytes(str(x), 'utf8'))
 
  
   # Close the connection with the client

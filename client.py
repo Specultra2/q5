@@ -1,5 +1,6 @@
 # Import socket module
-import socket            
+import socket     
+from num2words import num2words       
  
 # Create a socket object
 s = socket.socket()        
@@ -11,6 +12,7 @@ port = 12345
 s.connect(('127.0.0.1', port))
  
 # receive data from the server and decoding to get the string.
-print (str(s.recv(1024), 'utf8'))
+x = int(s.recv(1024))
+print (num2words(x , lang='id'))
 # close the connection
 s.close()    
